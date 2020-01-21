@@ -1,12 +1,22 @@
 const assert = require("assert");
 const { Builder, By, Key, until } = require("selenium-webdriver");
+const chrome = require("selenium-webdriver/chrome");
+
 require("chromedriver");
+
+const baseOptions = new chrome.Options();
+const chromeOptions = process.env.GITHUB_ACTIONS
+  ? baseOptions.headless()
+  : baseOptions;
 
 describe("google Search", () => {
   let browser;
 
   before(async () => {
-    browser = await new Builder().forBrowser("chrome").build();
+    browser = await new Builder()
+      .forBrowser("chrome")
+      .setChromeOptions(chromeOptions)
+      .build();
     browser.get("https://www.google.com");
   });
 

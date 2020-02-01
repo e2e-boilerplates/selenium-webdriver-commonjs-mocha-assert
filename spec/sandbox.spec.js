@@ -1,4 +1,4 @@
-const assert = require("assert");
+const { strictEqual } = require("assert");
 const { Builder, By } = require("selenium-webdriver");
 const chrome = require("selenium-webdriver/chrome");
 
@@ -26,9 +26,7 @@ describe("Sandbox", () => {
     const title = await browser.getTitle();
     const header = await browser.findElement(By.css("h1"));
 
-    assert.strictEqual(title, "Sandbox");
-    header.getText(text => {
-      assert.strictEqual(text, "Sandbox");
-    });
+    strictEqual(title, "Sandbox");
+    strictEqual(await header.getText(), "Sandbox");
   });
 });

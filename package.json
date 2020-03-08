@@ -1,6 +1,6 @@
 {
-  "author": "",
-  "description": "selenium-webdriver end-to-end test automation boilerplate project. Using commonjs, mocha and assert.",
+  "author": "Girma Nigusse <xgirma@gmail.com> (https://github.com/xgirma)",
+  "description": "selenium webdriver end-to-end test automation boilerplate.",
   "devDependencies": {
     "chai": "4.2.0",
     "chromedriver": "79.0.3",
@@ -23,7 +23,12 @@
   },
   "keywords": [
     "assert",
+    "boilerplate",
     "commonjs",
+    "e2e",
+    "e2e tests",
+    "example",
+    "integration test",
     "mocha",
     "selenium",
     "selenium-webdriver",

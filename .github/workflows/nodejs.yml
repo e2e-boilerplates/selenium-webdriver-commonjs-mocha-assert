@@ -1,5 +1,5 @@
 name: selenium-webdriver-commonjs-mocha-assert
-"on":
+'on':
   push: null
   schedule:
     - cron: 5 0 1-31/2 * *
